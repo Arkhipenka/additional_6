@@ -15,21 +15,21 @@ module.exports = function zeros(expression) {
                    if(numbers%2===0){                               
                        for(let x=2; x<=numbers; x=x+2){
                            if(x%10===0){
-                               zeroes=zeroes+1;
+                               this.zeroes=zeroes+1;
                            }
                            if(x%50===0){
-                               zeroes=zeroes+1;                    
+                               this.zeroes=zeroes+1;                    
                            }
-                           evenNumbers=evenNumbers+1;
+                           this.evenNumbers=evenNumbers+1;
                        }
                    }
                    else{                                            
                        for(let z=1; z<=numbers; z=z+2){
                            if(z%5===0){
-                               countFive=countFive+1;
+                               this.countFive=countFive+1;
                            }
                            if(z%25===0){
-                               countFive=countFive+1;
+                               this.countFive=countFive+1;
                            }
                        }
                    }
@@ -41,15 +41,15 @@ module.exports = function zeros(expression) {
                    for(let k=1; k<=numbers; k++)
                    {    if(k%5===0)
                         {
-                            zeroes=zeroes+1;
+                          this.zeroes=zeroes+1;
                         }
                        if(k%25===0)
                        {
-                           zeroes=zeroes+1;
+                          this.zeroes=zeroes+1;
                        }
                        if(k%2===0)
                        {
-                           evenNumbers=evenNumbers+1;
+                          this.evenNumbers=evenNumbers+1;
                        }
                    }
                    i = i + 2;
@@ -60,12 +60,13 @@ module.exports = function zeros(expression) {
         }
         if(evenNumbers<countFive)
         {
-            zeroes=zeroes+evenNumbers;
+            this.zeroes=zeroes+evenNumbers;
         }
         else
         {
-            zeroes=zeroes+countFive;
+            this.zeroes=zeroes+countFive;
         }
 
     return zeroes;
 }
+
